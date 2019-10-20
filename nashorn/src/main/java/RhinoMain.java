@@ -21,8 +21,11 @@ public class RhinoMain {
         ctxt.evaluateReader(scope, read("jvm-npm.js"), "jvm-npm.js",1, null);
         ctxt.evaluateReader(scope, read("runtime.js"), "runtime.js",1, null);
         ctxt.evaluateReader(scope, read("app.js"), "app.js",1, null);
-        Object test = ctxt.evaluateReader(scope, read("main.js"), "main.js",0 , null);
+        Object result = ctxt.evaluateReader(scope, read("main.js"), "main.js",0 , null);
 
+        String test = Context.toString(result);
+
+        System.out.println(test);
         /*String script = "const toto = 212;" +
                 "toto;" +
                 "print(2123);" +

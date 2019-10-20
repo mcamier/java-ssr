@@ -15,10 +15,7 @@ public class Main {
         engine.eval(read("jvm-npm.js"));
         engine.eval(read("runtime.js"));
         engine.eval(read("app.js"));
-        engine.eval(read("main.js"));
-
-        engine.eval("const a = 12;");
-        engine.eval("print(a);");
+        Object result = engine.eval(read("main.js"));
 
         System.out.println("HelloWorld");
     }

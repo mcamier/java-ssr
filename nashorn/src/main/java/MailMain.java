@@ -1,9 +1,14 @@
 import com.sun.mail.smtp.SMTPTransport;
+import org.apache.batik.transcoder.TranscoderException;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.batik.transcoder.image.PNGTranscoder;
 
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 import javax.mail.*;
 import javax.mail.internet.*;
-import javax.activation.*;
 
 public class MailMain {
 
@@ -12,17 +17,24 @@ public class MailMain {
     private static final String PASSWORD = "";
 
     private static final String EMAIL_FROM = "From@gmail.com";
-    private static final String EMAIL_TO = "email_1@yahoo.com, email_2@gmail.com";
+    private static final String EMAIL_TO = "email_1@yahoo.com";
     private static final String EMAIL_TO_CC = "";
 
     private static final String EMAIL_SUBJECT = "Test Send Email via SMTP";
-    private static final String EMAIL_TEXT = "Hello Java Mail \n ABC123";
 
-    public static void main(String[] args) {
-        sendMail("localhost", 1025);
+    public static void main(String[] args) throws FileNotFoundException, TranscoderException {
+        String content = "\n" +
+                "<svg version=\"1.1\"\n" +
+                "     baseProfile=\"full\"\n" +
+                "     width=\"300\" height=\"200\"\n" +
+                "     xmlns=\"http://www.w3.org/2000/svg\">" +
+                "  <circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\" />\n" +
+                "</svg>";
+        transformSVGToPng(content);
+        //sendMail("localhost", 1025, "no content");
     }
 
-    public static void sendMail(String host, Integer port) {
+    public static void sendMail(String host, Integer port, String content) {
         Properties prop = System.getProperties();
         prop.put("mail.smtp.host", SMTP_SERVER); //optional, defined in SMTPTransport
         prop.put("mail.smtp.auth", "true");
@@ -43,7 +55,7 @@ public class MailMain {
             // subject
             msg.setSubject(EMAIL_SUBJECT);
             // content
-            msg.setText(EMAIL_TEXT);
+            msg.setContent(content, "text/html; charset=utf-8");
             msg.setSentDate(new Date());
 
             // Get SMTPTransport
@@ -59,6 +71,20 @@ public class MailMain {
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static void transformSVGToPng(String svg) throws TranscoderException, FileNotFoundException {
+        PNGTranscoder t = new PNGTranscoder();
+
+        InputStream in = new ByteArrayInputStream(svg.getBytes(StandardCharsets.UTF_8));
+        TranscoderInput tin = new TranscoderInput(in);
+
+        //TranscoderOutput tout = new TranscoderOutput(new ByteArrayOutputStream());
+        OutputStream ostream = new FileOutputStream("out.jpg");
+        TranscoderOutput tout = new TranscoderOutput(ostream);
+
+        t.transcode(tin, tout);
+
 
     }
 }

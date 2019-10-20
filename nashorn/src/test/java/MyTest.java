@@ -12,7 +12,6 @@ import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
 import org.testcontainers.containers.DockerComposeContainer;
-import org.testcontainers.containers.GenericContainer;
 
 import java.io.File;
 
@@ -43,9 +42,15 @@ public class MyTest {
         String host = smtpContainer.getServiceHost("mailhog", 1025);
         Integer port = smtpContainer.getServicePort("mailhog", 1025);;
 
-        MailMain.sendMail(host, 1025);
+        String content = "<div class=\"App\" data-reactroot=\"\"><header class=\"App-header\"><img src=\"/static/media/logo.25bf045c.svg\" class=\"App-logo\" alt=\"logo\"/><p>Edit <code>src/App.js</code> and save to reload.</p><a class=\"App-link\" href=\"https://reactjs.org\" target=\"_blank\" rel=\"noopener noreferrer\">Learn React</a></header><svg width=\"100\" height=\"100\"><circle cx=\"50\" cy=\"50\" r=\"40\" stroke=\"green\" stroke-width=\"4\" fill=\"yellow\"></circle></svg></div>\n";
+        MailMain.sendMail(host, 1025, content);
         MailResponse messages = client.getMessages();
 
         assertThat(messages.count).isEqualTo(1);
+    }
+
+    @Test
+    public void test_transcoder() {
+
     }
 }
