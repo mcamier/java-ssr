@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e84ac1-5387-4697-845d-d17f631625c9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ui/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/ui/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nashorn/src/main/java/Report.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nashorn/src/main/resources/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/resources/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,17 +45,21 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/nashorn/src/test/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mickael Camier\workspace\ssr" />
       <recent name="C:\Users\Mickael Camier\workspace\ssr\nashorn\src\test\resources" />
       <recent name="C:\Users\Mickael Camier\workspace\ssr\nashorn\src\main\resources" />
     </key>
@@ -68,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MailMain">
+  <component name="RunManager" selected="Application.RhinoMain">
     <configuration name="MailMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MailMain" />
       <module name="ssr-nashorn" />
@@ -108,8 +116,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MailMain" />
         <item itemvalue="Application.RhinoMain" />
+        <item itemvalue="Application.MailMain" />
         <item itemvalue="JUnit.MyTest.test" />
       </list>
     </recent_temporary>
@@ -149,14 +157,14 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/nashorn/src/main/java/Main.java</url>
           <line>19</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="16" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

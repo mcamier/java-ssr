@@ -1,5 +1,4 @@
-import org.mozilla.javascript.Context;
-import org.mozilla.javascript.ScriptableObject;
+import org.mozilla.javascript.*;
 
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
@@ -11,29 +10,30 @@ import java.io.InputStreamReader;
 public class RhinoMain {
 
     public static void main(String[] args) throws ScriptException, IOException {
-
+        // initialize context
         Context ctxt = Context.enter();
         ctxt.setLanguageVersion(Context.VERSION_ES6);
-
         ScriptableObject scope = ctxt.initStandardObjects();
 
+        // evaluate scripts
         ctxt.evaluateReader(scope, read("rhino-polyfill.js"), "rhino-polyfill.js",1, null);
         ctxt.evaluateReader(scope, read("jvm-npm.js"), "jvm-npm.js",1, null);
         ctxt.evaluateReader(scope, read("runtime.js"), "runtime.js",1, null);
         ctxt.evaluateReader(scope, read("app.js"), "app.js",1, null);
-        Object result = ctxt.evaluateReader(scope, read("main.js"), "main.js",0 , null);
 
-        String test = Context.toString(result);
+        ctxt.evaluateReader(scope, read("main.js"), "main.js",0 , null);
 
-        System.out.println(test);
-        /*String script = "const toto = 212;" +
-                "toto;" +
-                "print(2123);" +
-                "print('trop cool');" +
-                "print(toto);";
-        Object test = ctxt.evaluateString(scope, script, "test", 0, null);
-*/
-        //System.out.println(test);
+        Report report = new Report("project name", "Campaign name");
+        Object jsObj = Context.javaToJS(report, scope);
+
+        Object fObj = scope.get("foobar", scope);
+        Function f = (Function) fObj;
+        Object result = f.call(ctxt, scope, null, new Object[]{jsObj});
+
+        if (result instanceof Wrapper) {
+             Object test = ((Wrapper) result).unwrap();
+        }
+
         Context.exit();
     }
 
