@@ -2,53 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9e84ac1-5387-4697-845d-d17f631625c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_anim_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_awt_util_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_bridge_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_constants_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_css_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_dom_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ext_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gvt_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_i18n_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_parser_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_script_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svg_dom_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svggen_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_transcoder_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_util_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_xml_1_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_3_04.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_ext_1_3_04.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/java/MailMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/java/MailMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/java/RhinoMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/resources/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/resources/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/resources/helloworld.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/resources/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/resources/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/main/resources/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/main/resources/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/test/java/MailResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/test/java/MailResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/src/test/java/MyTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/ssr-nashorn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/ssr-nashorn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/MailMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/MailMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/RhinoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/RhinoMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/helloworld.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/classes/runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/classes/runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/test-classes/META-INF/ssr-nashorn.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/test-classes/MailResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/test-classes/MailResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nashorn/target/test-classes/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/nashorn/target/test-classes/MyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
