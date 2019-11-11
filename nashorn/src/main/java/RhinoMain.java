@@ -9,21 +9,26 @@ import java.io.InputStreamReader;
 
 public class RhinoMain {
 
-    public static void main(String[] args) throws ScriptException, IOException {
-        // initialize context
-        Context ctxt = Context.enter();
+    private Context ctxt;
+    private ScriptableObject scope;
+
+    public RhinoMain() {
+        ctxt = Context.enter();
         ctxt.setLanguageVersion(Context.VERSION_ES6);
-        ScriptableObject scope = ctxt.initStandardObjects();
+        scope = ctxt.initStandardObjects();
 
         // evaluate scripts
-        ctxt.evaluateReader(scope, read("rhino-polyfill.js"), "rhino-polyfill.js",1, null);
-        ctxt.evaluateReader(scope, read("jvm-npm.js"), "jvm-npm.js",1, null);
-        ctxt.evaluateReader(scope, read("runtime.js"), "runtime.js",1, null);
-        ctxt.evaluateReader(scope, read("app.js"), "app.js",1, null);
+        try {
+            ctxt.evaluateReader(scope, read("rhino-polyfill.js"), "rhino-polyfill.js",1, null);
+            //ctxt.evaluateReader(scope, read("r.js"), "r.js",1, null);
+            ctxt.evaluateReader(scope, read("jvm-npm.js"), "r.js",1, null);
+            ctxt.evaluateReader(scope, read("bundle.js"), "bundle.js",1, null);
+        } catch (IOException e) {
+            throw new RuntimeException("RhinoMain failed to start");
+        }
+    }
 
-        ctxt.evaluateReader(scope, read("main.js"), "main.js",0 , null);
-
-        Report report = new Report("project name", "Campaign name");
+    public String evaluate(Report report) {
         Object jsObj = Context.javaToJS(report, scope);
 
         Object fObj = scope.get("foobar", scope);
@@ -31,10 +36,10 @@ public class RhinoMain {
         Object result = f.call(ctxt, scope, null, new Object[]{jsObj});
 
         if (result instanceof Wrapper) {
-             Object test = ((Wrapper) result).unwrap();
+            result = ((Wrapper) result).unwrap();
         }
 
-        Context.exit();
+        return (String) result;
     }
 
     private static InputStreamReader read(String filename) {
